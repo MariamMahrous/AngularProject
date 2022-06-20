@@ -1,0 +1,16 @@
+
+<div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+    <div class="col" *ngFor="let category of categorylist">
+        <div class="card ">
+            <img [src]="category.pic" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{category.name}}</h5>
+             
+            </div>
+            <button class="btn btn-primary"> Add Category</button>
+            <button class="btn btn-danger">Update Category</button>
+            <button class="btn btn-secondary">Delete Category</button>
+          </div>
+  
+  </div>
+    </div>
