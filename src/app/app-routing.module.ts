@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoryComponent } from './category/category.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { EditcompenComponent } from './editcompen/editcompen.component';
+import { GetuserComponent } from './getuser/getuser.component';
+import { ListcomponentComponent } from './listcomponent/listcomponent.component';
+import { OrderComponent } from './order/order.component';
+
+
 
 const routes: Routes = [
-  {path: "api/category" ,component:CategoryComponent},
-  {path: "api/login" ,component:LoginComponent},
-  {path: "api/register" ,component:RegisterComponent},
- {path:"**",component:NotFoundComponent}
-
+   { path : "edit:/id", component:EditcompenComponent},
+   {path : "about-us", component : ListcomponentComponent},
+   { path: "get" ,component: GetuserComponent},
+   { path:"order" , component:OrderComponent}
 ];
 
 @NgModule({

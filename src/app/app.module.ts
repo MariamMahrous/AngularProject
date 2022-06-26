@@ -1,34 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { CategoryComponent } from './category/category.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ListcomponentComponent } from './listcomponent/listcomponent.component';
 
 
 
+import { HttpClientModule } from
+'@angular/common/http';
+import { FormsModule  ,ReactiveFormsModule} from '@angular/forms';
+import { EditcompenComponent } from './editcompen/editcompen.component';
+import { NavComponent } from './nav/nav.component';
+import { OrderComponent } from './order/order.component';
+import { BlockproductComponent } from './blockproduct/blockproduct.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    RegisterComponent,
-    LoginComponent,
-    NotFoundComponent,
-    CategoryComponent
+    ListcomponentComponent,
+  
     
-
+    EditcompenComponent,
+    NavComponent,
+    OrderComponent,
+    BlockproductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+     FormsModule,
+     ReactiveFormsModule
+     
+
   ],
   providers: [],
   bootstrap: [AppComponent]

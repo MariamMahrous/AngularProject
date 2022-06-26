@@ -1,0 +1,96 @@
+<div class="container my-5" >
+    <form [formGroup]= "reactiveFrom" (ngSubmit)= "handleForm()">
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">  Name  </label>
+            <input 
+              type="text" 
+              class="form-control"
+               id="exampleInputName" 
+              formControlName="Name"
+               required>
+               <div *ngIf= "reactiveFrom.controls['Name'].touched && !reactiveFrom.controls['Name'].valid ">
+                  <small 
+                      id="emailHelp" 
+                      class="text-danger">
+                      please insert your  name
+                  </small>
+              </div>
+        </div>
+         <div class="mb-3">
+            <label for="exampleInputName" class="form-label"> User_Name  </label>
+            <input 
+              type="text" 
+              class="form-control"
+               id="exampleInputName" 
+              formControlName="User_Name"
+               required>
+               <div *ngIf= "reactiveFrom.controls['User_Name'].touched && !reactiveFrom.controls['User_Name'].valid || 
+               reactiveFrom.hasError('whitespace')">
+                  <small 
+                      id="emailHelp" 
+                      class="text-danger">
+                      please insert your User_Name
+                  </small>
+              </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"> Email1 </label>
+          <input 
+            type="email" 
+            class="form-control"
+             id="exampleInputEmail1" 
+            formControlName="Email1"
+             required>
+             
+             <div *ngIf= "reactiveFrom.controls['Email1'].touched && !reactiveFrom.controls['Email1'].valid ">
+                <small 
+                    id="emailHelp" 
+                    class="text-danger">
+                    please insert your  Email
+                </small>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"> password</label>
+          <input type="password" 
+                class="form-control" 
+                id="exampleInputPassword1"
+                formControlName="password"
+                required
+                >
+                <div *ngIf= "reactiveFrom.controls['password'].touched && !reactiveFrom.controls['password'].valid">
+                    <small 
+                        id="emailHelp" 
+                        formControlName="password"
+                        class="text-danger">
+                        please insert your password
+                    </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"> conform_password</label>
+            <input type="password" 
+                  class="form-control" 
+                  id="exampleInputPassword1"
+                  formControlName="conform_password"
+                  required
+                  >
+                  <div *ngIf= "reactiveFrom.controls['conform_password'].touched && !reactiveFrom.controls['conform_password'].valid">
+                      <small 
+                          id="emailHelp" 
+                          formControlName="conform_password"
+                          class="text-danger">
+                          please insert your  conformed password
+                      </small>
+              </div>
+          </div>
+       
+          
+   
+   <button type="submit"  (click)=" onsubmit" class="btn btn-primary"> Register</button>
+  </form>
+  </div>
+   
